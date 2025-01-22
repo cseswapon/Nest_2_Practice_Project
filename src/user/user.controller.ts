@@ -1,6 +1,10 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
-@Controller()
+@Controller('user')
 export class UserController {
   constructor() {}
+  @Get('fuck')
+  func() {
+    return { message: 'fuck' };
+  }
 }
