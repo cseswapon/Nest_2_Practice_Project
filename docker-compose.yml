@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  dev-db: # Fixed the service name
+    image: postgres:13
+    ports:
+      - "5434:5432" 
+    environment:
+      POSTGRES_USER: postgres # Use `:` for environment variables
+      POSTGRES_PASSWORD: "123" # Enclose passwords in quotes
+      POSTGRES_DB: nest
+    networks:
+      - localhost
+networks:
+  localhost:
